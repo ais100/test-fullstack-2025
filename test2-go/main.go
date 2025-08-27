@@ -75,11 +75,13 @@ func main() {
 			})
 		}
 
-		return c.Status(fiber.StatusOK).JSON(fiber.Map{
-			"username": user.Email,
-			"realname": user.Realname,
-			"email":    user.Email,
-		})
+		resp := loginResponse{
+			Username: user.Email,
+			Realname: user.Realname,
+			Email:    user.Email,
+			Message:  "login successful",
+		}
+		return c.Status(fiber.StatusOK).JSON(resp)
 	})
 
 	log.Fatal(app.Listen(":3000"))
