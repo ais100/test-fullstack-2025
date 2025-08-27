@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es2015",       // modern JS (instead of es5)
+    "module": "commonjs",     // good for Node.js
+    "outDir": "./dist",       // compiled JS output folder
+    "rootDir": "./src",       // your TS source folder
+    "strict": true,           // enable strict type checking
+    "esModuleInterop": true,  // allows import/export compatibility
+    "lib": ["es2015", "dom"]  // includes Number.isInteger, Promise, etc.
+  }
+}
